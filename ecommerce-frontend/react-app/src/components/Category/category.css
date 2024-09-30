@@ -1,0 +1,148 @@
+#category-container{
+    width: 90%;
+    background-color: #ffebcd;
+    height: fit-content;
+
+    padding: 32px 0px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 28px;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 50px;
+}
+
+
+#category-title{
+ font-size: 20px;
+ font-weight: 500;
+ 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#category-card-row{
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+}
+
+
+
+.category-card{
+    transition: background-color 1s ease;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+    
+}
+
+.category-card-title{
+    font-size: 1rem;
+}
+
+.category-card:hover{
+    cursor: pointer;
+    background-color: orange;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    opacity: 0; /* Start with the overlay hidden */
+    transition: opacity 0.5s ease; /* Smooth transition */
+    z-index: 2;
+}
+
+.category-img{
+    z-index:0;
+    transition: opacity 0.5s ease;
+}
+.category-card:hover .category-img{
+    opacity: 0.9;
+}
+
+@keyframes slideIn{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+.category-card{
+    /*animation: slideIn 1s ease-in-out forwards;
+
+    transition for viewport visible animation*/
+    transform: translateX(-10%);
+    opacity:0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.slide-in{
+    animation: slideIn 0.6s ease-in-out forwards;
+}
+
+#vegetables-card{
+    animation-delay: 0.2s;
+}
+
+#fruits-card{
+    animation-delay: 0.4s;
+}
+
+#snacks-card{
+    animation-delay: 0.6s;
+}
+
+#electronics-card{
+    animation-delay: 0.8s;
+}
+
+
+@media screen and (max-width: 960px) {
+    #category-card-row{
+        flex-wrap: wrap;
+    }
+
+    .category-card{
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    #category-card-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category-card{
+        margin-right: 10px;
+        margin-top: 20px;
+        
+    }
+
+    .category-img{
+        
+        height: 150px;
+    }
+}

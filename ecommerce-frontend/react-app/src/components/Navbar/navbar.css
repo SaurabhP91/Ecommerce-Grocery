@@ -1,0 +1,261 @@
+#navbar-container{
+    height: 80px;
+    padding: 0 24px;
+    display: flex;
+    background-color: rgb(255, 131, 59);
+
+    align-items:center;
+    justify-content:space-between;
+    font-size: 1rem;
+    gap:14px;
+}
+
+#menu-container{
+    display: none;
+    cursor: pointer;
+}
+
+#menu-dropdown{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 270px;
+    left: 0px;
+    background-color: rgb(255, 131, 59);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    height: 180px;
+    padding: 5px 0px;
+
+    border: 2px solid black;
+
+    justify-content: space-around;
+    align-items: center;
+
+    display: none;
+
+    
+    
+}
+
+#nav-logo{
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+
+    font-weight: 600;
+    font-size: 24px;
+
+    margin-right: auto;
+}
+
+#eco{
+    color:rgb(53, 122, 32);
+}
+
+#nav-items-container{
+    margin-right: auto;
+    width:40%;
+    display: flex;
+    justify-content: space-around;
+
+    font-weight: 400;
+    font-size: 18px;
+}
+
+
+.navitem:hover{
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+.navitem:active{
+    border-bottom: 2px solid black;
+    font-weight: 500;
+}
+
+.selected{
+    border-bottom: 2px solid black;
+    font-weight: 600;
+}
+
+#search-container{
+    margin-right: auto;
+    background-color:blanchedalmond;
+    border: 1px solid black;
+    
+    width: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#searchbar{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 14px;
+
+    width: 90%;
+    margin-left: 10px;
+    height: min-content;
+    height: 100%;
+    
+}
+
+#searchbar:focus{
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+#searchbar::placeholder{
+    color:black;
+}
+
+#categories{
+    height: 40px;
+    padding: 5px;
+}
+
+.icon-container{
+    background-color: rgb(53, 122, 32);
+    height: 40px;
+    width: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.signin-btn{
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 30px;
+    height: min-content;
+    box-shadow: 1px 10px 100px 0px;
+
+    background-color: black;
+}
+
+
+#account-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 170px;
+
+    background-color: rgb(53, 122, 32);
+    padding: 10px 0px 10px 0px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+    z-index: 2;
+}
+
+.account-icon{
+    color: rgb(53, 122, 32);
+}
+
+#account-icon-container{
+    border-radius: 50%;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#account-name{
+    font-size: small;
+    text-wrap:nowrap;
+    color: aliceblue;
+}
+
+#arrow-icon-container{
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.arrow-icon{
+    
+}
+
+#user-dropdown{
+    position: absolute;
+    display:none;
+    flex-direction: column;
+    align-items: center;
+    top: 60px;
+    right: 27px;
+
+    background-color: rgb(53, 122, 32);
+    box-shadow: rgba(128, 128, 128, 0.5) 5px 5px 15px 5px;
+    width:160px;
+    color: aliceblue;
+
+    z-index: 1;
+    border-radius: 0%;
+
+}
+
+.dropdown-btn:hover{
+    color: black;
+    text-decoration:underline;
+
+}
+
+@media screen and (max-width: 960px) {
+    #navbar-container{
+        flex-wrap: nowrap;
+    }
+
+    #nav-logo{
+        padding: 0px;
+        font-size: 18px;
+    }
+
+    #menu-container{
+        display: flex;
+      
+    }
+
+   
+
+    #nav-items-container{
+        display: none;
+    }
+
+    #search-container{
+        width: 40%;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .signin-btn{
+        padding: 12px 18px;
+    }
+}
