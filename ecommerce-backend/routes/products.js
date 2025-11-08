@@ -29,6 +29,12 @@ router.post('/', async (req,res) => {
 
     try{
         const { name, description, price, category, image} = req.body;
+        const findProduct = await Product.findOne({name: name});
+        if(findProduct)
+        {
+            console.log("Product already registered");
+            return res.status(409).send("Product already exists");
+        }
 
         const product = new Product ({
             name,

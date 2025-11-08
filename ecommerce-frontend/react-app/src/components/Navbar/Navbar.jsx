@@ -68,9 +68,11 @@ const Navbar = () => {
     const dispatch = useDispatch();
 
     const handleClickLogout = () => {
+        
         dispatch(updateUser(null));
         navigate("/");
         window.location.reload();
+        
     }
 
     const handleClickCart = () => {
@@ -79,10 +81,8 @@ const Navbar = () => {
 
     const handleClickContact = () => {
         /*if(footerRef.current){
-            footerRef.current.scrollIntoView({behaviour: 'smooth'});
+            footerRef.current.scrollIntoView({behaviour: 'smooth'}); 
         }*/
-
-       
     }
 
 
@@ -90,6 +90,7 @@ const Navbar = () => {
     useEffect(() => {
 
     },[])
+    
   return (
     <div id='navbar-container'>
 

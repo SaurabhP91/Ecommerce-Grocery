@@ -7,6 +7,13 @@ body {
     font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*background-image: linear-gradient(to bottom,#643e1c,#b27465 , #ffece6);
+  background-repeat:no-repeat;*/
+
+  background-color: #fbc97f;
+  /*background-image: url("./utils/Images/freepik__retouch__66690.png");*/
+  
+
 }
 
 code {

@@ -19,9 +19,11 @@ import Search from '../Search/Search';
 
 const ProductsList = () => {
     const [productslist,setProductsList] = useState([]);
+    
     //redux
     const dispatch = useDispatch();
     const currentProductsList = useSelector((state) => state.products);
+    const currentuser = useSelector((state) => state.user);
 
     const getAllProducts = async () => {
         try{
@@ -44,6 +46,37 @@ const ProductsList = () => {
             console.log(error.message);
         }
     };
+
+    //UPDATED ON 23/06
+     const updateQuantity = async (pId, updatetype) => {
+
+        try{
+            const response = await fetch(`http://localhost:8000/api/cart/${currentuser?.currentUser?._id}`, {
+                method: "POST",
+                headers: {'content-type': 'application/json',},
+
+                body: JSON.stringify({
+                    productId: pId,
+                    quantity: 1,
+                    type: updatetype,
+                }),
+            });
+
+            if(response.ok)
+            {
+                console.log("quantity updated");
+                const data = await response.json();
+                console.log(data);
+                
+            }
+
+        } catch (error) {
+            console.log(error.message);
+
+        }
+
+    }
+
 
     useEffect(() => {
         getAllProducts();
@@ -80,7 +113,7 @@ const ProductsList = () => {
                         <span className='price-tag'>
                             Rs. {item.price}
                         </span>
-                        <span className='addcart-btn'>
+                        <span className='addcart-btn' onClick={() => updateQuantity(item._id,'add')}>
                            + Add to Cart
                         </span>
 

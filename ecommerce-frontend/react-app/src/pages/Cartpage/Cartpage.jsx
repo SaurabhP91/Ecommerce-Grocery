@@ -43,7 +43,7 @@ const Cartpage = () => {
     const updateQuantity = async (pId, updatetype) => {
 
         try{
-            const response = await fetch("http://localhost:8000/api/cart/66ab78f509f0cbcd3c549b53", {
+            const response = await fetch(`http://localhost:8000/api/cart/${currentuser?.currentUser?._id}`, {
                 method: "POST",
                 headers: {'content-type': 'application/json',},
 
@@ -72,7 +72,7 @@ const Cartpage = () => {
     const removeQuantity = async (pId) => {
 
         try{
-            const response = await fetch(`http://localhost:8000/api/cart/66ab78f509f0cbcd3c549b53/${pId}`, {
+            const response = await fetch(`http://localhost:8000/api/cart/${currentuser?.currentUser?._id}/${pId}`, {
                 method: "DELETE",
                 headers: {'content-type': 'application/json',},
             });
@@ -108,6 +108,7 @@ const Cartpage = () => {
 
         <div id='cart-container'>
             <table id='cart-table'>
+                
                 <thead>
                     <tr>
                         <th className='product-column'>Product</th>

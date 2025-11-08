@@ -92,27 +92,27 @@ const Category = () => {
             <span id='category-title'>Shop by Categories</span>
 
             <div id='category-card-row' ref={categoryRef}>
-                <Card sx={{maxWidth: 300, minWidth:150}} id='vegetables-card' className='category-card'>
+                <Card sx={{maxWidth: 220, minWidth:150}} id='vegetables-card' className='category-card'>
                     <CardHeader title="Vegetables" sx={{height:10, fontFamily: 'sans-serif'}} className='category-card-title'/>
 
                     <CardMedia component="img" height="220" image={VegetablesImage} alt='vegetablesImage' className='category-img'/>
 
                 </Card>
 
-                <Card sx={{maxWidth: 300, minWidth:150}} id='fruits-card' className='category-card'>
+                <Card sx={{maxWidth: 220, minWidth:150}} id='fruits-card' className='category-card'>
                     <CardHeader title="Fruits" sx={{height:10}} className='category-card-title'/>
 
                     <CardMedia component="img" height="220" image={FruitsImage} alt='fruitsImage' className='category-img'/>
 
                 </Card>
 
-                <Card sx={{maxWidth: 300, minWidth:150}} id='snacks-card' className='category-card'>
+                <Card sx={{maxWidth: 220, minWidth:150}} id='snacks-card' className='category-card'>
                     <CardHeader title="Food/Snacks" sx={{height:10}} className='category-card-title'/>
                     
                     <CardMedia component="img" height="220" image={SnacksImage} alt='snacksImage' className='category-img'/>
                 </Card>
 
-                <Card sx={{maxWidth: 300, minWidth:150}} id='electronics-card' className='category-card'>
+                <Card sx={{maxWidth: 220, minWidth:150}} id='electronics-card' className='category-card'>
                     <CardHeader title="Electronics" sx={{height:10}} className='category-card-title'/>
 
                     <CardMedia component="img" height="220" image={ElectronicsImage} alt='electronicsImage' className='category-img'/>

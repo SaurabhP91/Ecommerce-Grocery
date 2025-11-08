@@ -13,7 +13,6 @@ const productRoute = require("./routes/products");
 const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 
-
 const router = express.Router();
 
 const app = express();
@@ -38,7 +37,7 @@ let isConnected = false;
         isConnected = true;
         
     } catch(error) {
-        console.error("could not connect to db");
+        console.error("could not connect to db: "+error.message);
         
     }
 })();
@@ -52,7 +51,7 @@ app.use("/api/cart", cartRoute);
 app.use("/api/orders", orderRoute);
 
 app.get('/', (req, res) => {
-    res.send('<h1>Welcome to the E-commerce App</h1>');
+    res.send('<h1>Welcome to the E-commerce Backend App</h1>');
 });
 
 

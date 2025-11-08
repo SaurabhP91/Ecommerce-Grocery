@@ -14,11 +14,14 @@
     margin-right: auto;
 
     margin-top: 50px;
+
+    border-radius: 20px;
+
 }
 
 
 #bestsellers-title{
- font-size: 28px;
+ font-size: 1.5rem;
  font-weight: 500;
  
  display: flex;
@@ -115,7 +118,7 @@
 .bestsellers-card-title{
     margin-top: 10px;
     font-family: sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
     width: 100%;
 

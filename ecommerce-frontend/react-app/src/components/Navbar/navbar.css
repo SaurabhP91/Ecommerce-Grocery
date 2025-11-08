@@ -144,7 +144,7 @@
     justify-content: center;
     padding: 16px 30px;
     height: min-content;
-    box-shadow: 1px 10px 100px 0px;
+    /*box-shadow: 1px 10px 100px 0px;*/
 
     background-color: black;
 }
@@ -257,5 +257,17 @@
 @media screen and (max-width: 500px) {
     .signin-btn{
         padding: 12px 18px;
+    }
+
+    #search-container{
+        display: none;
+    }
+
+    #nav-logo{
+        margin-left: 20px;
+    }
+
+    #categories{
+        width: 40%;
     }
 }

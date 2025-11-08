@@ -2,10 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orange;
+    background-color: rgb(255, 131, 59);
 
     margin-bottom: 200px;
     width: 100%;
+
+    padding: 20px 0px;
 }
 
 .cart-title{
@@ -32,8 +34,8 @@
 
 }
 
-#cart-table thead td{
-    
+#cart-table tbody{
+    background-color: orange;
 }
 
 .product-column{
@@ -75,31 +77,54 @@
 
 .clear{
     color: darkred;
-    border: none;
+    border: 2px solid black;
     padding: 10px 12px;
     background-color: white;
     cursor: pointer;
     font-size: 16px;
 
+    border-radius: 5px;
+
+}
+
+.clear:hover{
+    background-color: darkred;
+    color:white;
 }
 
 .update{
-    background-color: grey;
-    border: none;
+    background-color: white;
+    border: 2px solid black;
     padding: 10px 12px;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
+    color: rgb(53, 122, 32);
+
+}
+
+.update:hover{
+    background-color: rgb(53, 122, 32);
+    color:white;
 }
 
 .proceed{
-    background-color: rgb(53, 122, 32);
-    border: none;
+    background-color: white;
+    border: 2px solid black;
     padding: 10px 12px;
-    color:aliceblue;
+    color:rgb(203, 103, 2);
 
     cursor: pointer;
 
     font-size: 16px;
+    border-radius: 5px;
+
+}
+
+.proceed:hover{
+    background-color: green;
+    color:rgb(255, 174, 93);
+    font-weight: 500;
 }
 
 .clear:hover, .update:hover, .proceed:hover{
@@ -119,6 +144,7 @@
 .minus{
     margin-right: 20px;
     font-size: 25px;
+    
 
     background-color: aliceblue;
     padding: 0px 10px;
@@ -131,7 +157,7 @@
     font-size: 25px;
 
     background-color: aliceblue;
-    padding: 0px 10px;
+    padding: 0px 8px;
     cursor: pointer;
 }
 
@@ -213,5 +239,15 @@
 
     #cart-actions{
         width: 180%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #product-column{
+        width: 20px;
+    }
+
+    #product-data{
+        width: 20px;
     }
 }

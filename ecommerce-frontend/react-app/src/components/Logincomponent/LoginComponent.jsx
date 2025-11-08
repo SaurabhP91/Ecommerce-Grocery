@@ -23,7 +23,7 @@ const LoginComponent = () => {
 
     const navigate = useNavigate();
 
-    const currentuser = useSelector((state) => state.user)
+    const currentuser = useSelector((state) => state.user);
     const dispatch = useDispatch();
     
 
@@ -97,7 +97,7 @@ const LoginComponent = () => {
                 navigate("/");
             }
             else if(response.status === 400){
-                console.log("error")
+                console.log("error");
     
             }
 
@@ -177,7 +177,7 @@ const LoginComponent = () => {
                     </span>
                 </div>
 
-
+    
                 <FormControlLabel control={<Checkbox color='success'/>} label='I agree with all the terms and conditions in EcoShop'/>
 
                 <button type='submit' className='login-submit'>Create Account</button>
